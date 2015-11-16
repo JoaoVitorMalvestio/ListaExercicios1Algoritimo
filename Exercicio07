@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int num=0,par=0,impar=0,validador=1,contPar=0,contImpar=0;
+
+    printf("Entre com um valor\n");
+    scanf("%d", &num);
+
+    if(num%2==0)
+    {   contPar++;
+        par = num;}
+    else
+    {   contImpar++;
+        impar = num;}
+
+    printf("Digite 0 para parar ou outro numero para continuar\n");
+    scanf("%d",&validador);
+
+    if(validador != 0){
+    do{
+        printf("Entre com um valor e descubra qual eh o maior valor!\n");
+        scanf("%d", &num);
+
+        if(num%2 == 0)
+            {
+                contPar++;
+                if(par != 0)
+                {par = num+par;}
+                else
+                {par = num;}
+            }
+        else if(num%2 != 0)
+            {
+                contImpar++;
+                if(impar != 0)
+                {impar = num+impar;}
+                else
+                {impar = num;}
+            }
+
+        printf("Digite 0 para parar ou outro numero para continuar\n");
+        scanf("%d",&validador);
+
+    }while(validador != 0);}
+
+    printf("A soma dos pares eh %d\n", par);
+    printf("A soma dos impares eh %d\n", impar);
+    printf("Foram entrados %d numeros pares\n", contPar);
+    printf("Foram entrados %d numeros impares\n", contImpar);
+
+    system("pause");
+    return 0;
+}
