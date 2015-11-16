@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(void)
+{
+    int num1;
+    int num2;
+    int i;
+    bool ehprimo = false;
+
+    for(i = 3;i <= 1000;i++)
+    {
+        num2 = i;
+
+        if(num2 == 3 || num2 == 5|| num2 == 7)
+        {
+            ehprimo = true;
+        }
+        else if(num2%2 != 0 && num2%3 != 0&& num2%5 != 0&& num2%7 != 0)
+        {
+            ehprimo = true;
+        }
+
+        if(ehprimo)
+        {
+            if(num1 >= 3)
+            {
+                printf("%d e %d sao primos gemeos!\n", num1, num2);
+            }
+            num1 = num2;
+            ehprimo = false;
+        }
+    }
+
+    system("pause");
+    return 0;
+}
