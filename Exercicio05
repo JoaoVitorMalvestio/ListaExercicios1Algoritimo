@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void)
+{
+double expo=0, num=0,resultado=0;
+
+    printf("Entre com um numero inteiro que sera elevado\n");
+    scanf("%lf", &num);
+
+    printf("Entre com o expoente natural\n");
+    scanf("%lf", &expo);
+
+    if(expo <= 0)
+        {
+            while(expo <= 0)
+                {
+                    printf("Entre com o expoente natural valido\n");
+                    scanf("%lf", &expo);
+                }
+        }
+    resultado = pow(num,expo);
+
+    printf("%lf elevado a %lf eh igual a %lf\n",num,expo,resultado);
+
+
+    system("pause");
+    return 0;
+}
