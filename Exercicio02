@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int i,num,aux = 0;
+
+    printf("Entre com um numero e descubra a soma dos numero até esse numero\n");
+    scanf("%d", &num);
+
+    for(i=1;i<=num;i++)
+        {
+            aux = aux+i;
+        }
+
+    printf("O resultado eh %d\n", aux);
+
+    system("pause");
+    return 0;
+}
