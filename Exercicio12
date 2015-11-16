@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int i = 0;
+
+    printf("Todos os primos entre 2 e 20.000\n");
+
+    for(i = 2;i <= 20000;i++)
+    {
+        if (i == 2 || i == 3 || i == 5 || i == 7)
+        {
+            printf("%d\n", i);
+        }
+        else
+        {
+            if (i%2!=0 && i%3!=0 && i%5!=0 && i%7!=0)
+            {
+                printf("%d\n", i);
+            }
+        }
+    }
+
+    system("pause");
+    return 0;
+}
