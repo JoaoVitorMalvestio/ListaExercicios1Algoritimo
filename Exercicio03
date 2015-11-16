@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int i,num,impar;
+
+    printf("Entre com um numero e descubra os todos os numeros impares entre ele e 1\n");
+    scanf("%d", &num);
+
+    if(num <= 0)
+    {
+            while(num <= 0)
+            {
+                    printf("Entre com um numero maior que 1\n");
+                    scanf("%d", &num);
+            }
+    }
+
+    printf("Todos os impares entre 1 e %d:\n", num);
+
+    for(i = 1;i <= num;i++)
+        {
+        if(i%2!=0){printf("%d\n",i);}
+        }
+
+
+    system("pause");
+    return 0;
+}
