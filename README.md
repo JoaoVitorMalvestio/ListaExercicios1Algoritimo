@@ -1,1 +1,0 @@
-# ListaExercicios1Algoritimoo
