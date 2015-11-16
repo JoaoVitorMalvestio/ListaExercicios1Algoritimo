@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int num=0,resultado=0,validador=1;
+
+    printf("Entre com um valor da temperatura\n");
+    scanf("%d", &num);
+
+    resultado = num;
+
+    printf("Entre 0 para ver a media ou outro numero para entrar mais numeros\n");
+    scanf("%d",&validador);
+
+    if(validador != 0){
+    do{
+        printf("Entre com um valor da temperatura\n");
+        scanf("%d", &num);
+
+        resultado = (num+resultado)/2;
+
+        printf("Entre 0 para ver a media ou outro numero para entrar mais numeros\n");
+        scanf("%d",&validador);
+
+    }while(validador != 0);}
+
+    printf("A media eh %d\n", resultado);
+
+    system("pause");
+    return 0;
+}
