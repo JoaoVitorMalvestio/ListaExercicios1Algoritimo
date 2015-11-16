@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int num;
+
+    printf("Entre com um numero e descubra seu quadrado\n");
+    scanf("%d", &num);
+
+    do{
+        printf("O Quadrado eh %d\n", num*num);
+        printf("Entre com outro numero ou entre zero para terminar\n");
+        scanf("%d", &num);
+
+    }while(num!=0);
+
+    system("pause");
+    return 0;
+}
