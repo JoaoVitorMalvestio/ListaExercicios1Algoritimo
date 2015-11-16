@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+    int num=0,resultado=0,validador=1;
+
+    printf("Entre com um valor e descubra qual eh o maior valor!\n");
+    scanf("%d", &num);
+
+    resultado = num;
+
+    printf("Digite 0 para parar ou outro numero para continuar\n");
+    scanf("%d",&validador);
+
+    if(validador != 0){
+    do{
+        printf("Entre com um valor\n");
+        scanf("%d", &num);
+
+        if(num > resultado)
+        {resultado = num;}
+
+        printf("Digite 0 para parar ou outro numero para continuar\n");
+        scanf("%d",&validador);
+
+    }while(validador != 0);}
+
+    printf("O maior numero eh %d\n", resultado);
+
+    system("pause");
+    return 0;
+}
